@@ -1,5 +1,3 @@
-import { UiTheme } from '@/shared/types/enum'
-import React from 'react'
 import { Outlet } from 'react-router-dom'
 
 type Props = {}
