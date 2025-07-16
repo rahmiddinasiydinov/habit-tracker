@@ -1,6 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux';
-import type {reduxStore} from '../types/ui';
+import type {reduxStoreValue} from '../types/ui';
 
 type Props = {
     children: React.ReactNode
@@ -9,7 +9,7 @@ type Props = {
 const THEMES = ['light', 'dark', 'red'];
 
 const ThemeProvider = ({ children }: Props) => {
-    const theme = useSelector((state:reduxStore) => state.ui.theme) || 0;
+    const theme = useSelector((state:reduxStoreValue) => state.ui.theme) || 0;
     
 
     return (<>

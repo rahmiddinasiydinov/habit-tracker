@@ -3,9 +3,12 @@ import type { UiSliceValue } from "@/shared/types/ui";
 import { createSlice } from "@reduxjs/toolkit";
 
 
+const deviceInnerWidth = window.innerWidth;
+const MIN_LARGE_DEVICE_LENGTH = 1024
 
 const initialState: UiSliceValue = {
-    theme: UiTheme.Light
+    theme: UiTheme.Light, 
+    isSidebarOpen: deviceInnerWidth < MIN_LARGE_DEVICE_LENGTH 
 }
 
 const uiSlice = createSlice({
@@ -14,6 +17,9 @@ const uiSlice = createSlice({
     reducers: {
         updateUi(state, action) {
             state.theme = action.payload
+        },
+        toggleSideBar(state){
+            state.isSidebarOpen = !state.isSidebarOpen
         }
     }
 })
