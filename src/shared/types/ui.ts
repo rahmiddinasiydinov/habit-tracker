@@ -5,6 +5,6 @@ export type UiSliceValue = {
     isSidebarOpen: boolean
 }
 
-export type reduxStore = {
+export type reduxStoreValue = {
     ui: UiSliceValue,
 }
