@@ -1,15 +1,28 @@
 import { useSelector } from "react-redux"
-import type { reduxStoreValue } from "../types/ui"
+import type { UiStateValue } from "../types/ui"
+import SideBarActions from "./sidebar-actions";
+import useScreenWidths from "../hooks/useScreenWidths";
 
 type Props = {}
 
 export default function Sidebar({ }: Props) {
-  const isSidebarOpen = useSelector((state:reduxStoreValue )=> state.ui.isSidebarOpen)
-console.log(isSidebarOpen);
+  const isSidebarOpen = useSelector((state: UiStateValue) => state.ui.isSidebarOpen);
+  const {sidebarWidth} = useScreenWidths();
+
+  const getClassNames = () => {
+    let classNames = '';
+
+    if (isSidebarOpen) {
+      classNames += ' translate-x-[0]'
+    } else {
+      classNames += ` -translate-x-[100%]`
+    }
+    return classNames;
+  }
 
   return (
-    <div className='absolute left-0 top-0 h-dvh bg-card-background w-[15%]'>
-
+    <div className={`relative z-100 h-dvh bg-card-background transition duration-500 ${getClassNames()}`} style={{width: sidebarWidth}}>
+      <SideBarActions />
     </div>
   )
 }

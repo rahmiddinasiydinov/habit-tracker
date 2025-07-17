@@ -1,8 +1,8 @@
-
 type Props = {}
 
-export default function Dashboard({}: Props) {
+export default function Dashboard({ }: Props) {
+
   return (
-    <div>Dashboard</div>
+    <div >Dashboard</div>
   )
 }

@@ -7,8 +7,8 @@ const deviceInnerWidth = window.innerWidth;
 const MIN_LARGE_DEVICE_LENGTH = 1024
 
 const initialState: UiSliceValue = {
-    theme: UiTheme.Light, 
-    isSidebarOpen: deviceInnerWidth < MIN_LARGE_DEVICE_LENGTH 
+    theme: UiTheme.Light,
+    isSidebarOpen: deviceInnerWidth > MIN_LARGE_DEVICE_LENGTH
 }
 
 const uiSlice = createSlice({
@@ -18,9 +18,12 @@ const uiSlice = createSlice({
         updateUi(state, action) {
             state.theme = action.payload
         },
-        toggleSideBar(state){
-            state.isSidebarOpen = !state.isSidebarOpen
-        }
+        openSideBar(state) {
+            state.isSidebarOpen = true;
+        },
+        closeSideBar(state) {
+            state.isSidebarOpen = false;
+        },
     }
 })
 
