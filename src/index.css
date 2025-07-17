@@ -15,7 +15,7 @@
   --dashboard-secondary: rgb(235, 235, 235);
   --uncompleted: rgb(255, 180, 180);
   --completed: rgb(207, 15, 71);
-  --active-bg: rgb(200, 200, 200);
+  --active-bg: rgb(225, 225, 225);
   --active-text: rgb(255, 11, 85);
   --radius: 0.625rem;
   --background: oklch(1 0 0);
@@ -87,13 +87,13 @@
   --color-card-background: var(--card-background);
   --color-text-primary: var(--text-primary);
   --color-text-secondary: var(--text-secondary);
-  --color-accent-primary:  var(--accent-primary);
-  --color-accent-secondary:  var(--accent-secondary);
+  --color-accent-primary: var(--accent-primary);
+  --color-accent-secondary: var(--accent-secondary);
   --color-dashboard-primary: var(--color-dashboard-primary);
   --color-dashboard-secondary: var(--color-uncompleted);
   --color-uncompleted: var(--color-uncompleted);
-  --color-completed:  var(--color-completed);
-  --color-active-bg:  var(--color-active-bg);
+  --color-completed: var(--color-completed);
+  --color-active-bg: var(--color-active-bg);
   --color-active-text: var(--color-active-text);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
@@ -134,6 +134,17 @@
 .navbar__active {
   background-color: var(--active-bg);
   color: var(--active-text);
+  display: inline-block;
+  width: 100%;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.navbar {
+  display: inline-block;
+  width: 100%;
+  padding: 10px 20px;
+  border-radius: 5px;
 }
 
 /* ---break---*/
@@ -178,6 +189,7 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
