@@ -11,7 +11,6 @@ function useScreenWidths() {
     const [sidebarWidth, setSideBarWidth] = useState(getSidebarWidth());
 
     const handleResize = useCallback(() => {
-        console.log(getMainContentWidth(isSidebarOpen));
         setMainContentWidth(getMainContentWidth(isSidebarOpen));
         setSideBarWidth(getSidebarWidth())
     }, [isSidebarOpen])

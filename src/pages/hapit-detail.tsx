@@ -1,8 +1,9 @@
+import MainContentHeader from "@/shared/components/main-content-header"
 
 type Props = {}
 
 export default function HabitDetailPage({}: Props) {
   return (
-    <div>Hapit-detail</div>
+    <MainContentHeader>Hapit-detail</MainContentHeader>
   )
 }

@@ -1,7 +1,9 @@
+import MainContentHeader from "@/shared/components/main-content-header"
+
 type Props = {}
 
 export default function StatsPage({}: Props) {
   return (
-    <div>Stats</div>
+    <MainContentHeader>Stats</MainContentHeader>
   )
 }

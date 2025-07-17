@@ -17,7 +17,6 @@ export const getMainContentWidth = (isSideBarOpen:boolean,) => {
     if(isSideBarOpen){
         width = (windowWidth - getSidebarDeviceWidth(windowWidth)) + 'px';
     }
-    // console.log(isSideBarOpen, width);
     
     return width;
 }
